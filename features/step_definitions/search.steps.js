@@ -44,11 +44,11 @@ Then('пользователь на странице с текстом {string}'
 When('пользователь выбирает место', async function () {
   return await clickElement(this.page, 'div:nth-child(3) span:nth-child(5)');
 });
-When('пользователь выбирает еще одно место', async function () {
-  return await clickElement(this.page, 'div:nth-child(4) span:nth-child(7)');
+When('Пользователь выбирает ряд {int} и место {int}', async function () {
+  return await clickElement(this.page, 'div:nth-child(2) span:nth-child(4)');
 });
-When('пользователь выбирает третье место', async function () {
-  return await clickElement(this.page, 'div:nth-child(2) span:nth-child(1)');
+When('Пользователь выбирает ряд {int} и место {int}', async function () {
+  return await clickElement(this.page, 'div:nth-child(5) span:nth-child(5)');
 });
 When('пользователь нажимает кнопку забронировать', async function () {
   return await clickElement(this.page, '.acceptin-button');

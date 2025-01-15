@@ -1,5 +1,5 @@
 Feature: Booking cinema tickets tests
-    @only
+    
      Scenario: booking available ticket
         Given пользователь находится на странице "http://qamid.tmweb.ru/client/index.php"
         When пользователь выбирает дату
@@ -13,8 +13,8 @@ Feature: Booking cinema tickets tests
         When пользователь выбирает дату
         When пользователь выбирает время фильма
         When пользователь выбирает место
-        When пользователь выбирает еще одно место
-        When пользователь выбирает третье место
+        When Пользователь выбирает ряд 2 и место 4
+        When Пользователь выбирает ряд 5 и место 5
         When пользователь нажимает кнопку забронировать
         Then пользователь на странице с текстом "Вы выбрали билеты:"
 
@@ -25,9 +25,3 @@ Feature: Booking cinema tickets tests
         When пользователь выбирает уже забронированное место
         Then нажать на кнопку забронировать невозможно
 
-//сценарий для материала из лекции
-Feature: Search a course
-    Scenario: Should search by text
-        Given user is on "/navigation" page
-        When user search by "тестировщик"
-        Then user sees the course suggested "Тестировщик ПО"
